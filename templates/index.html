@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="C:\Users\user\Desktop\Django\project_1\templates\script.js"></script>
+</head>
+<body>
+    <h1>Hello world</h1><br><h2>This is Shakti Santosh Nayak</h2><a href='http://127.0.0.1:8000/about'>Go to about page</a><br><a href='http://127.0.0.1:8000/contact'>Go to contact page</a>
+    <br><a href='https://www.youtube.com/'>You Tube</a><br><a href='http://127.0.0.1:8000/lineremover'>Line Remover</a><br>
+    <a href='http://127.0.0.1:8000/spaceremover'>Space Remover</a><br>
+    <a href='http://127.0.0.1:8000/titlize'>Title the Sentence</a>
+    <h3>{{greeting}}</h3>
+
+    <form action="/contact" method="post">   {% csrf_token %}
+
+        <!-- Django by default uses csrf token to provide protection to the page -->
+        <table><tr>
+
+        <td><label>Email ID:</label></td>
+        <td><textarea name="email" style="user-select: auto; width: 597px; height: 159px;"></textarea></td>
+        <!-- The name is set to get the text during the get method -->
+        </tr>
+        <td><input type="checkbox" name="lineremover">Remove the new Line</td>
+    </tr>
+    <tr><td><input type="checkbox" name="spaceremover">Remove the Space</td></tr>
+    <tr><td><input type="checkbox" name="title_words">Title the Words</td></tr>
+        </table>
+<br>
+        <button>Sumbit the text</button>
+        </form>
+</body>
+</html>
